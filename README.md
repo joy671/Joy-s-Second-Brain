@@ -262,6 +262,72 @@ Expand legal notes.
 
 
 
+                [ ESRD CORE ]
+                      ↓
+     ┌────────────┬────────────┬────────────┐
+     ↓            ↓            ↓            ↓
+ [Dialysis]   [Infection]   [Anemia]   [Metabolic]
+     ↓            ↓            ↓            ↓
+ Stabilize    Remove Source   Restore Hb   Balance System
+     └────────────┴────────────┴────────────┘
+                      ↓
+            SYSTEM RECOVERY LOOP
+
+
+
+
+
+
+# 🧠 Clinical Decision System: ESRD Multi-Disease Case
+
+## 👩 Patient: Mrs. Nila Shukla  
+Acute condition involving:
+- End-Stage Renal Disease (ESRD)
+- Active Infection
+- Severe Anemia
+- Metabolic Imbalance
+
+---
+
+# 🌳 1. Clinical Decision Tree (Linear Model)
+
+```mermaid
+flowchart TD
+
+A[START: ESRD + Infection + Anemia]
+
+A --> B{Dialysis Needed?}
+B -->|Yes| C[Emergency Dialysis]
+C --> D[Stabilize Creatinine & Potassium]
+
+D --> E{Long-term Access?}
+E --> F[AV Fistula Planning]
+
+A --> G{Infection Present?}
+G -->|Yes| H[Start Antibiotics]
+
+H --> I{Kidney Stone Obstruction?}
+I -->|Yes| J[Urology Surgery / Stent]
+I -->|No| K[Continue Antibiotics]
+
+A --> L{Severe Anemia?}
+L -->|Yes| M[EPO Therapy]
+
+M --> N{Unstable?}
+N -->|Yes| O[Blood Transfusion]
+
+A --> P[Metabolic Control]
+P --> Q[Diabetes + Thyroid + Electrolytes]
+
+Q --> R[Follow-up Monitoring]
+
+R --> S[END: Stabilization Path]
+
+
+
+
+
+
 
 
 
